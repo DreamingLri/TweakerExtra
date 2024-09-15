@@ -1,39 +1,30 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
-	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"id": "tweaker-extra",
+	"version": "${mod_version}",
+	"name": "Tweaker Extra",
+	"description": "Add some tweaks to my client",
 	"authors": [
-		"Me!"
+		"DreamingLri"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/DreamingLri/TweakerExtra"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
-	"environment": "*",
+	"license": "LGPLv3",
+	"icon": "assets/tweakerextra/icon.png",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
 		"client": [
-			"com.example.ExampleModClient"
+			"com.dreaminglri.tweakerextra.TweakerExtra"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
+      "mixins.tweakerextra.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.2",
-		"minecraft": "~1.21.1",
-		"java": ">=21",
-		"fabric-api": "*"
+		"minecraft": ">=1.21 <=1.21.1",
+		"malilib": ">=0.20.0"
 	},
 	"suggests": {
 		"another-mod": "*"
